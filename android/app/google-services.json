@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "273962086975",
+    "project_id": "fluttertest-91869",
+    "storage_bucket": "fluttertest-91869.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:273962086975:android:621788738d4d778fb43e8a",
+        "android_client_info": {
+          "package_name": "com.example.beyan_a"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIyw4OFDha2WAEoK4smJ46xwnegiynHAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

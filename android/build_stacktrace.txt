@@ -1,0 +1,629 @@
+
+> Configure project :app
+WARNING:We recommend using a newer Android Gradle plugin to use compileSdk = 34
+
+This Android Gradle plugin (7.3.0) was tested up to compileSdk = 33
+
+This warning can be suppressed by adding
+    android.suppressUnsupportedCompileSdk=34
+to this project's gradle.properties
+
+The build will continue, but you are strongly encouraged to update your project to
+use a newer Android Gradle Plugin that has been tested with compileSdk = 34
+Unable to decide if project isolation is enabled
+java.lang.NoSuchMethodError: 'org.gradle.internal.buildoption.BuildOption$Value org.gradle.api.internal.StartParameterInternal.getIsolatedProjects()'
+	at com.android.build.gradle.internal.StartParameterUtils.isProjectIsolation(StartParameterUtils.kt:41)
+	at com.android.build.gradle.internal.profile.AnalyticsResourceManager.recordGlobalProperties(AnalyticsResourceManager.kt:288)
+	at com.android.build.gradle.internal.profile.AnalyticsConfiguratorService$createAnalyticsService$2.execute(AnalyticsConfiguratorService.kt:118)
+	at com.android.build.gradle.internal.profile.AnalyticsConfiguratorService$createAnalyticsService$2.execute(AnalyticsConfiguratorService.kt:117)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.configuration.internal.DefaultListenerBuildOperationDecorator$BuildOperationEmittingInvocationHandler$1.lambda$run$0(DefaultListenerBuildOperationDecorator.java:255)
+	at org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.reapply(DefaultUserCodeApplicationContext.java:98)
+	at org.gradle.configuration.internal.DefaultListenerBuildOperationDecorator$BuildOperationEmittingInvocationHandler$1.run(DefaultListenerBuildOperationDecorator.java:253)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:68)
+	at org.gradle.configuration.internal.DefaultListenerBuildOperationDecorator$BuildOperationEmittingInvocationHandler.invoke(DefaultListenerBuildOperationDecorator.java:250)
+	at jdk.proxy1/jdk.proxy1.$Proxy70.graphPopulated(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.event.AbstractBroadcastDispatch.dispatch(AbstractBroadcastDispatch.java:43)
+	at org.gradle.internal.event.BroadcastDispatch$SingletonDispatch.dispatch(BroadcastDispatch.java:257)
+	at org.gradle.internal.event.BroadcastDispatch$SingletonDispatch.dispatch(BroadcastDispatch.java:164)
+	at org.gradle.internal.event.AbstractBroadcastDispatch.dispatch(AbstractBroadcastDispatch.java:83)
+	at org.gradle.internal.event.AbstractBroadcastDispatch.dispatch(AbstractBroadcastDispatch.java:69)
+	at org.gradle.internal.event.BroadcastDispatch$CompositeDispatch.dispatch(BroadcastDispatch.java:363)
+	at org.gradle.internal.event.BroadcastDispatch$CompositeDispatch.dispatch(BroadcastDispatch.java:261)
+	at org.gradle.internal.event.ListenerBroadcast.dispatch(ListenerBroadcast.java:148)
+	at org.gradle.internal.event.ListenerBroadcast.dispatch(ListenerBroadcast.java:37)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy70.graphPopulated(Unknown Source)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$NotifyTaskGraphWhenReady.run(DefaultTaskExecutionGraph.java:381)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:68)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.lambda$fireWhenReady$0(DefaultTaskExecutionGraph.java:361)
+	at org.gradle.internal.Factories$1.create(Factories.java:31)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withReplacedLocks(DefaultWorkerLeaseService.java:345)
+	at org.gradle.api.internal.project.DefaultProjectStateRegistry$DefaultBuildProjectRegistry.withMutableStateOfAllProjects(DefaultProjectStateRegistry.java:228)
+	at org.gradle.api.internal.project.DefaultProjectStateRegistry$DefaultBuildProjectRegistry.withMutableStateOfAllProjects(DefaultProjectStateRegistry.java:221)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.fireWhenReady(DefaultTaskExecutionGraph.java:360)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.populate(DefaultTaskExecutionGraph.java:109)
+	at org.gradle.internal.build.DefaultBuildWorkPreparer.finalizeWorkGraph(DefaultBuildWorkPreparer.java:53)
+	at org.gradle.internal.build.BuildOperationFiringBuildWorkPreparer.finalizeWorkGraph(BuildOperationFiringBuildWorkPreparer.java:79)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$finalizeWorkGraph$9(DefaultBuildLifecycleController.java:191)
+	at org.gradle.internal.model.StateTransitionController.lambda$doTransition$14(StateTransitionController.java:255)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:254)
+	at org.gradle.internal.model.StateTransitionController.lambda$transition$5(StateTransitionController.java:160)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:34)
+	at org.gradle.internal.model.StateTransitionController.transition(StateTransitionController.java:160)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.finalizeWorkGraph(DefaultBuildLifecycleController.java:187)
+	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.finalizeGraph(DefaultBuildWorkGraphController.java:195)
+	at org.gradle.composite.internal.DefaultBuildController.finalizeWorkGraph(DefaultBuildController.java:111)
+	at org.gradle.composite.internal.DefaultBuildControllers.populateWorkGraphs(DefaultBuildControllers.java:79)
+	at org.gradle.composite.internal.DefaultIncludedBuildTaskGraph$DefaultBuildTreeWorkGraph$1.run(DefaultIncludedBuildTaskGraph.java:198)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:68)
+	at org.gradle.composite.internal.DefaultIncludedBuildTaskGraph$DefaultBuildTreeWorkGraph.scheduleWork(DefaultIncludedBuildTaskGraph.java:192)
+	at org.gradle.internal.buildtree.DefaultBuildTreeWorkPreparer.scheduleRequestedTasks(DefaultBuildTreeWorkPreparer.java:37)
+	at org.gradle.configurationcache.VintageBuildTreeWorkController$scheduleAndRunRequestedTasks$1.apply(VintageBuildTreeWorkController.kt:36)
+	at org.gradle.configurationcache.VintageBuildTreeWorkController$scheduleAndRunRequestedTasks$1.apply(VintageBuildTreeWorkController.kt:35)
+	at org.gradle.composite.internal.DefaultIncludedBuildTaskGraph.withNewWorkGraph(DefaultIncludedBuildTaskGraph.java:109)
+	at org.gradle.configurationcache.VintageBuildTreeWorkController.scheduleAndRunRequestedTasks(VintageBuildTreeWorkController.kt:35)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.lambda$scheduleAndRunTasks$1(DefaultBuildTreeLifecycleController.java:68)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.lambda$runBuild$4(DefaultBuildTreeLifecycleController.java:98)
+	at org.gradle.internal.model.StateTransitionController.lambda$transition$6(StateTransitionController.java:169)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.lambda$transition$7(StateTransitionController.java:169)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+	at org.gradle.internal.model.StateTransitionController.transition(StateTransitionController.java:169)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.runBuild(DefaultBuildTreeLifecycleController.java:95)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.scheduleAndRunTasks(DefaultBuildTreeLifecycleController.java:68)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.scheduleAndRunTasks(DefaultBuildTreeLifecycleController.java:63)
+	at org.gradle.tooling.internal.provider.ExecuteBuildActionRunner.run(ExecuteBuildActionRunner.java:31)
+	at org.gradle.launcher.exec.ChainingBuildActionRunner.run(ChainingBuildActionRunner.java:35)
+	at org.gradle.internal.buildtree.ProblemReportingBuildActionRunner.run(ProblemReportingBuildActionRunner.java:49)
+	at org.gradle.launcher.exec.BuildOutcomeReportingBuildActionRunner.run(BuildOutcomeReportingBuildActionRunner.java:65)
+	at org.gradle.tooling.internal.provider.FileSystemWatchingBuildActionRunner.run(FileSystemWatchingBuildActionRunner.java:140)
+	at org.gradle.launcher.exec.BuildCompletionNotifyingBuildActionRunner.run(BuildCompletionNotifyingBuildActionRunner.java:41)
+	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.lambda$execute$0(RootBuildLifecycleBuildActionExecutor.java:40)
+	at org.gradle.composite.internal.DefaultRootBuildState.run(DefaultRootBuildState.java:122)
+	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.execute(RootBuildLifecycleBuildActionExecutor.java:40)
+	at org.gradle.internal.buildtree.InitDeprecationLoggingActionExecutor.execute(InitDeprecationLoggingActionExecutor.java:58)
+	at org.gradle.internal.buildtree.DefaultBuildTreeContext.execute(DefaultBuildTreeContext.java:40)
+	at org.gradle.launcher.exec.BuildTreeLifecycleBuildActionExecutor.lambda$execute$0(BuildTreeLifecycleBuildActionExecutor.java:65)
+	at org.gradle.internal.buildtree.BuildTreeState.run(BuildTreeState.java:53)
+	at org.gradle.launcher.exec.BuildTreeLifecycleBuildActionExecutor.execute(BuildTreeLifecycleBuildActionExecutor.java:65)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor$3.call(RunAsBuildOperationBuildActionExecutor.java:61)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor$3.call(RunAsBuildOperationBuildActionExecutor.java:57)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor.execute(RunAsBuildOperationBuildActionExecutor.java:57)
+	at org.gradle.launcher.exec.RunAsWorkerThreadBuildActionExecutor.lambda$execute$0(RunAsWorkerThreadBuildActionExecutor.java:36)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:249)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:109)
+	at org.gradle.launcher.exec.RunAsWorkerThreadBuildActionExecutor.execute(RunAsWorkerThreadBuildActionExecutor.java:36)
+	at org.gradle.tooling.internal.provider.continuous.ContinuousBuildActionExecutor.execute(ContinuousBuildActionExecutor.java:110)
+	at org.gradle.tooling.internal.provider.SubscribableBuildActionExecutor.execute(SubscribableBuildActionExecutor.java:64)
+	at org.gradle.internal.session.DefaultBuildSessionContext.execute(DefaultBuildSessionContext.java:46)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter$ActionImpl.apply(BuildSessionLifecycleBuildActionExecuter.java:100)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter$ActionImpl.apply(BuildSessionLifecycleBuildActionExecuter.java:88)
+	at org.gradle.internal.session.BuildSessionState.run(BuildSessionState.java:69)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter.execute(BuildSessionLifecycleBuildActionExecuter.java:62)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter.execute(BuildSessionLifecycleBuildActionExecuter.java:41)
+	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:64)
+	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:32)
+	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:50)
+	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:38)
+	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:47)
+	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:31)
+	at org.gradle.launcher.daemon.server.exec.ExecuteBuild.doBuild(ExecuteBuild.java:65)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.WatchForDisconnection.execute(WatchForDisconnection.java:39)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ResetDeprecationLogger.execute(ResetDeprecationLogger.java:29)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.RequestStopIfSingleUsedDaemon.execute(RequestStopIfSingleUsedDaemon.java:35)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.create(ForwardClientInput.java:78)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.create(ForwardClientInput.java:75)
+	at org.gradle.util.internal.Swapper.swap(Swapper.java:38)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput.execute(ForwardClientInput.java:75)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.LogAndCheckHealth.execute(LogAndCheckHealth.java:64)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.LogToClient.doBuild(LogToClient.java:63)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment.doBuild(EstablishBuildEnvironment.java:84)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy$1.run(StartBuildOrRespondWithBusy.java:52)
+	at org.gradle.launcher.daemon.server.DaemonStateCoordinator$1.run(DaemonStateCoordinator.java:297)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Unable to decide if config caching is enabled
+java.lang.NoSuchMethodError: 'org.gradle.internal.buildoption.BuildOption$Value org.gradle.api.internal.StartParameterInternal.getConfigurationCache()'
+	at com.android.build.gradle.internal.StartParameterUtils.isConfigurationCache(StartParameterUtils.kt:30)
+	at com.android.build.gradle.internal.profile.AnalyticsResourceManager.recordGlobalProperties(AnalyticsResourceManager.kt:301)
+	at com.android.build.gradle.internal.profile.AnalyticsConfiguratorService$createAnalyticsService$2.execute(AnalyticsConfiguratorService.kt:118)
+	at com.android.build.gradle.internal.profile.AnalyticsConfiguratorService$createAnalyticsService$2.execute(AnalyticsConfiguratorService.kt:117)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.configuration.internal.DefaultListenerBuildOperationDecorator$BuildOperationEmittingInvocationHandler$1.lambda$run$0(DefaultListenerBuildOperationDecorator.java:255)
+	at org.gradle.configuration.internal.DefaultUserCodeApplicationContext$CurrentApplication.reapply(DefaultUserCodeApplicationContext.java:98)
+	at org.gradle.configuration.internal.DefaultListenerBuildOperationDecorator$BuildOperationEmittingInvocationHandler$1.run(DefaultListenerBuildOperationDecorator.java:253)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:68)
+	at org.gradle.configuration.internal.DefaultListenerBuildOperationDecorator$BuildOperationEmittingInvocationHandler.invoke(DefaultListenerBuildOperationDecorator.java:250)
+	at jdk.proxy1/jdk.proxy1.$Proxy70.graphPopulated(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.event.AbstractBroadcastDispatch.dispatch(AbstractBroadcastDispatch.java:43)
+	at org.gradle.internal.event.BroadcastDispatch$SingletonDispatch.dispatch(BroadcastDispatch.java:257)
+	at org.gradle.internal.event.BroadcastDispatch$SingletonDispatch.dispatch(BroadcastDispatch.java:164)
+	at org.gradle.internal.event.AbstractBroadcastDispatch.dispatch(AbstractBroadcastDispatch.java:83)
+	at org.gradle.internal.event.AbstractBroadcastDispatch.dispatch(AbstractBroadcastDispatch.java:69)
+	at org.gradle.internal.event.BroadcastDispatch$CompositeDispatch.dispatch(BroadcastDispatch.java:363)
+	at org.gradle.internal.event.BroadcastDispatch$CompositeDispatch.dispatch(BroadcastDispatch.java:261)
+	at org.gradle.internal.event.ListenerBroadcast.dispatch(ListenerBroadcast.java:148)
+	at org.gradle.internal.event.ListenerBroadcast.dispatch(ListenerBroadcast.java:37)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy70.graphPopulated(Unknown Source)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$NotifyTaskGraphWhenReady.run(DefaultTaskExecutionGraph.java:381)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:68)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.lambda$fireWhenReady$0(DefaultTaskExecutionGraph.java:361)
+	at org.gradle.internal.Factories$1.create(Factories.java:31)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withReplacedLocks(DefaultWorkerLeaseService.java:345)
+	at org.gradle.api.internal.project.DefaultProjectStateRegistry$DefaultBuildProjectRegistry.withMutableStateOfAllProjects(DefaultProjectStateRegistry.java:228)
+	at org.gradle.api.internal.project.DefaultProjectStateRegistry$DefaultBuildProjectRegistry.withMutableStateOfAllProjects(DefaultProjectStateRegistry.java:221)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.fireWhenReady(DefaultTaskExecutionGraph.java:360)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.populate(DefaultTaskExecutionGraph.java:109)
+	at org.gradle.internal.build.DefaultBuildWorkPreparer.finalizeWorkGraph(DefaultBuildWorkPreparer.java:53)
+	at org.gradle.internal.build.BuildOperationFiringBuildWorkPreparer.finalizeWorkGraph(BuildOperationFiringBuildWorkPreparer.java:79)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$finalizeWorkGraph$9(DefaultBuildLifecycleController.java:191)
+	at org.gradle.internal.model.StateTransitionController.lambda$doTransition$14(StateTransitionController.java:255)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:254)
+	at org.gradle.internal.model.StateTransitionController.lambda$transition$5(StateTransitionController.java:160)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:34)
+	at org.gradle.internal.model.StateTransitionController.transition(StateTransitionController.java:160)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.finalizeWorkGraph(DefaultBuildLifecycleController.java:187)
+	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.finalizeGraph(DefaultBuildWorkGraphController.java:195)
+	at org.gradle.composite.internal.DefaultBuildController.finalizeWorkGraph(DefaultBuildController.java:111)
+	at org.gradle.composite.internal.DefaultBuildControllers.populateWorkGraphs(DefaultBuildControllers.java:79)
+	at org.gradle.composite.internal.DefaultIncludedBuildTaskGraph$DefaultBuildTreeWorkGraph$1.run(DefaultIncludedBuildTaskGraph.java:198)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:68)
+	at org.gradle.composite.internal.DefaultIncludedBuildTaskGraph$DefaultBuildTreeWorkGraph.scheduleWork(DefaultIncludedBuildTaskGraph.java:192)
+	at org.gradle.internal.buildtree.DefaultBuildTreeWorkPreparer.scheduleRequestedTasks(DefaultBuildTreeWorkPreparer.java:37)
+	at org.gradle.configurationcache.VintageBuildTreeWorkController$scheduleAndRunRequestedTasks$1.apply(VintageBuildTreeWorkController.kt:36)
+	at org.gradle.configurationcache.VintageBuildTreeWorkController$scheduleAndRunRequestedTasks$1.apply(VintageBuildTreeWorkController.kt:35)
+	at org.gradle.composite.internal.DefaultIncludedBuildTaskGraph.withNewWorkGraph(DefaultIncludedBuildTaskGraph.java:109)
+	at org.gradle.configurationcache.VintageBuildTreeWorkController.scheduleAndRunRequestedTasks(VintageBuildTreeWorkController.kt:35)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.lambda$scheduleAndRunTasks$1(DefaultBuildTreeLifecycleController.java:68)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.lambda$runBuild$4(DefaultBuildTreeLifecycleController.java:98)
+	at org.gradle.internal.model.StateTransitionController.lambda$transition$6(StateTransitionController.java:169)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.lambda$transition$7(StateTransitionController.java:169)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+	at org.gradle.internal.model.StateTransitionController.transition(StateTransitionController.java:169)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.runBuild(DefaultBuildTreeLifecycleController.java:95)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.scheduleAndRunTasks(DefaultBuildTreeLifecycleController.java:68)
+	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.scheduleAndRunTasks(DefaultBuildTreeLifecycleController.java:63)
+	at org.gradle.tooling.internal.provider.ExecuteBuildActionRunner.run(ExecuteBuildActionRunner.java:31)
+	at org.gradle.launcher.exec.ChainingBuildActionRunner.run(ChainingBuildActionRunner.java:35)
+	at org.gradle.internal.buildtree.ProblemReportingBuildActionRunner.run(ProblemReportingBuildActionRunner.java:49)
+	at org.gradle.launcher.exec.BuildOutcomeReportingBuildActionRunner.run(BuildOutcomeReportingBuildActionRunner.java:65)
+	at org.gradle.tooling.internal.provider.FileSystemWatchingBuildActionRunner.run(FileSystemWatchingBuildActionRunner.java:140)
+	at org.gradle.launcher.exec.BuildCompletionNotifyingBuildActionRunner.run(BuildCompletionNotifyingBuildActionRunner.java:41)
+	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.lambda$execute$0(RootBuildLifecycleBuildActionExecutor.java:40)
+	at org.gradle.composite.internal.DefaultRootBuildState.run(DefaultRootBuildState.java:122)
+	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.execute(RootBuildLifecycleBuildActionExecutor.java:40)
+	at org.gradle.internal.buildtree.InitDeprecationLoggingActionExecutor.execute(InitDeprecationLoggingActionExecutor.java:58)
+	at org.gradle.internal.buildtree.DefaultBuildTreeContext.execute(DefaultBuildTreeContext.java:40)
+	at org.gradle.launcher.exec.BuildTreeLifecycleBuildActionExecutor.lambda$execute$0(BuildTreeLifecycleBuildActionExecutor.java:65)
+	at org.gradle.internal.buildtree.BuildTreeState.run(BuildTreeState.java:53)
+	at org.gradle.launcher.exec.BuildTreeLifecycleBuildActionExecutor.execute(BuildTreeLifecycleBuildActionExecutor.java:65)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor$3.call(RunAsBuildOperationBuildActionExecutor.java:61)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor$3.call(RunAsBuildOperationBuildActionExecutor.java:57)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor.execute(RunAsBuildOperationBuildActionExecutor.java:57)
+	at org.gradle.launcher.exec.RunAsWorkerThreadBuildActionExecutor.lambda$execute$0(RunAsWorkerThreadBuildActionExecutor.java:36)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:249)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:109)
+	at org.gradle.launcher.exec.RunAsWorkerThreadBuildActionExecutor.execute(RunAsWorkerThreadBuildActionExecutor.java:36)
+	at org.gradle.tooling.internal.provider.continuous.ContinuousBuildActionExecutor.execute(ContinuousBuildActionExecutor.java:110)
+	at org.gradle.tooling.internal.provider.SubscribableBuildActionExecutor.execute(SubscribableBuildActionExecutor.java:64)
+	at org.gradle.internal.session.DefaultBuildSessionContext.execute(DefaultBuildSessionContext.java:46)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter$ActionImpl.apply(BuildSessionLifecycleBuildActionExecuter.java:100)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter$ActionImpl.apply(BuildSessionLifecycleBuildActionExecuter.java:88)
+	at org.gradle.internal.session.BuildSessionState.run(BuildSessionState.java:69)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter.execute(BuildSessionLifecycleBuildActionExecuter.java:62)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter.execute(BuildSessionLifecycleBuildActionExecuter.java:41)
+	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:64)
+	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:32)
+	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:50)
+	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:38)
+	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:47)
+	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:31)
+	at org.gradle.launcher.daemon.server.exec.ExecuteBuild.doBuild(ExecuteBuild.java:65)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.WatchForDisconnection.execute(WatchForDisconnection.java:39)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ResetDeprecationLogger.execute(ResetDeprecationLogger.java:29)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.RequestStopIfSingleUsedDaemon.execute(RequestStopIfSingleUsedDaemon.java:35)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.create(ForwardClientInput.java:78)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.create(ForwardClientInput.java:75)
+	at org.gradle.util.internal.Swapper.swap(Swapper.java:38)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput.execute(ForwardClientInput.java:75)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.LogAndCheckHealth.execute(LogAndCheckHealth.java:64)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.LogToClient.doBuild(LogToClient.java:63)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment.doBuild(EstablishBuildEnvironment.java:84)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy$1.run(StartBuildOrRespondWithBusy.java:52)
+	at org.gradle.launcher.daemon.server.DaemonStateCoordinator$1.run(DaemonStateCoordinator.java:297)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+> Task :clean
+> Task :app:clean UP-TO-DATE
+> Task :audio_session:clean UP-TO-DATE
+> Task :audioplayers_android:clean UP-TO-DATE
+> Task :camera_android:clean UP-TO-DATE
+> Task :flutter_mediapipe:clean UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:clean UP-TO-DATE
+> Task :just_audio:clean UP-TO-DATE
+> Task :path_provider_android:clean UP-TO-DATE
+> Task :speech_to_text:clean UP-TO-DATE
+> Task :tflite_flutter:clean UP-TO-DATE
+> Task :url_launcher_android:clean UP-TO-DATE
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:compileFlutterBuildDebug
+> Task :app:packLibsflutterBuildDebug
+> Task :audio_session:preBuild UP-TO-DATE
+> Task :audio_session:preDebugBuild UP-TO-DATE
+> Task :audio_session:compileDebugAidl NO-SOURCE
+> Task :audioplayers_android:preBuild UP-TO-DATE
+> Task :audioplayers_android:preDebugBuild UP-TO-DATE
+> Task :audioplayers_android:compileDebugAidl NO-SOURCE
+> Task :camera_android:preBuild UP-TO-DATE
+> Task :camera_android:preDebugBuild UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:preBuild UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:preDebugBuild UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:compileDebugAidl NO-SOURCE
+> Task :camera_android:compileDebugAidl NO-SOURCE
+> Task :flutter_mediapipe:preBuild UP-TO-DATE
+> Task :flutter_mediapipe:preDebugBuild UP-TO-DATE
+> Task :flutter_mediapipe:compileDebugAidl NO-SOURCE
+> Task :just_audio:preBuild UP-TO-DATE
+> Task :just_audio:preDebugBuild UP-TO-DATE
+> Task :just_audio:compileDebugAidl NO-SOURCE
+> Task :path_provider_android:preBuild UP-TO-DATE
+> Task :path_provider_android:preDebugBuild UP-TO-DATE
+> Task :path_provider_android:compileDebugAidl NO-SOURCE
+> Task :speech_to_text:preBuild UP-TO-DATE
+> Task :speech_to_text:preDebugBuild UP-TO-DATE
+> Task :speech_to_text:compileDebugAidl NO-SOURCE
+> Task :tflite_flutter:preBuild UP-TO-DATE
+> Task :tflite_flutter:preDebugBuild UP-TO-DATE
+> Task :tflite_flutter:compileDebugAidl NO-SOURCE
+> Task :url_launcher_android:preBuild UP-TO-DATE
+> Task :url_launcher_android:preDebugBuild UP-TO-DATE
+> Task :url_launcher_android:compileDebugAidl NO-SOURCE
+> Task :app:compileDebugAidl NO-SOURCE
+> Task :audio_session:packageDebugRenderscript NO-SOURCE
+> Task :audioplayers_android:packageDebugRenderscript NO-SOURCE
+> Task :camera_android:packageDebugRenderscript NO-SOURCE
+> Task :flutter_mediapipe:packageDebugRenderscript NO-SOURCE
+> Task :flutter_plugin_android_lifecycle:packageDebugRenderscript NO-SOURCE
+> Task :just_audio:packageDebugRenderscript NO-SOURCE
+> Task :path_provider_android:packageDebugRenderscript NO-SOURCE
+> Task :speech_to_text:packageDebugRenderscript NO-SOURCE
+> Task :tflite_flutter:packageDebugRenderscript NO-SOURCE
+> Task :url_launcher_android:packageDebugRenderscript NO-SOURCE
+> Task :app:compileDebugRenderscript NO-SOURCE
+> Task :app:generateDebugBuildConfig
+> Task :audioplayers_android:writeDebugAarMetadata
+> Task :audio_session:writeDebugAarMetadata
+> Task :camera_android:writeDebugAarMetadata
+> Task :flutter_mediapipe:writeDebugAarMetadata
+> Task :flutter_plugin_android_lifecycle:writeDebugAarMetadata
+> Task :just_audio:writeDebugAarMetadata
+> Task :path_provider_android:writeDebugAarMetadata
+> Task :speech_to_text:writeDebugAarMetadata
+> Task :tflite_flutter:writeDebugAarMetadata
+> Task :url_launcher_android:writeDebugAarMetadata
+> Task :app:cleanMergeDebugAssets UP-TO-DATE
+> Task :app:checkDebugAarMetadata
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :audio_session:mergeDebugShaders
+> Task :audio_session:compileDebugShaders NO-SOURCE
+> Task :audio_session:generateDebugAssets UP-TO-DATE
+> Task :audio_session:packageDebugAssets
+> Task :audioplayers_android:mergeDebugShaders
+> Task :audioplayers_android:compileDebugShaders NO-SOURCE
+> Task :audioplayers_android:generateDebugAssets UP-TO-DATE
+> Task :audioplayers_android:packageDebugAssets
+> Task :camera_android:mergeDebugShaders
+> Task :camera_android:compileDebugShaders NO-SOURCE
+> Task :camera_android:generateDebugAssets UP-TO-DATE
+> Task :camera_android:packageDebugAssets
+> Task :flutter_mediapipe:mergeDebugShaders
+> Task :flutter_mediapipe:compileDebugShaders NO-SOURCE
+> Task :flutter_mediapipe:generateDebugAssets UP-TO-DATE
+> Task :flutter_mediapipe:packageDebugAssets
+> Task :flutter_plugin_android_lifecycle:mergeDebugShaders
+> Task :flutter_plugin_android_lifecycle:compileDebugShaders NO-SOURCE
+> Task :flutter_plugin_android_lifecycle:generateDebugAssets UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:packageDebugAssets
+> Task :just_audio:mergeDebugShaders
+> Task :just_audio:compileDebugShaders NO-SOURCE
+> Task :just_audio:generateDebugAssets UP-TO-DATE
+> Task :just_audio:packageDebugAssets
+> Task :path_provider_android:mergeDebugShaders
+> Task :path_provider_android:compileDebugShaders NO-SOURCE
+> Task :path_provider_android:generateDebugAssets UP-TO-DATE
+> Task :path_provider_android:packageDebugAssets
+> Task :speech_to_text:mergeDebugShaders
+> Task :speech_to_text:compileDebugShaders NO-SOURCE
+> Task :speech_to_text:generateDebugAssets UP-TO-DATE
+> Task :speech_to_text:packageDebugAssets
+> Task :tflite_flutter:mergeDebugShaders
+> Task :tflite_flutter:compileDebugShaders NO-SOURCE
+> Task :tflite_flutter:generateDebugAssets UP-TO-DATE
+> Task :tflite_flutter:packageDebugAssets
+> Task :url_launcher_android:mergeDebugShaders
+> Task :url_launcher_android:compileDebugShaders NO-SOURCE
+> Task :url_launcher_android:generateDebugAssets UP-TO-DATE
+> Task :url_launcher_android:packageDebugAssets
+> Task :app:mergeDebugAssets
+> Task :app:copyFlutterAssetsDebug
+> Task :app:generateDebugResValues
+> Task :audio_session:compileDebugRenderscript NO-SOURCE
+> Task :audio_session:generateDebugResValues
+> Task :audio_session:generateDebugResources
+> Task :audio_session:packageDebugResources
+> Task :audioplayers_android:compileDebugRenderscript NO-SOURCE
+> Task :audioplayers_android:generateDebugResValues
+> Task :audioplayers_android:generateDebugResources
+> Task :audioplayers_android:packageDebugResources
+> Task :camera_android:compileDebugRenderscript NO-SOURCE
+> Task :camera_android:generateDebugResValues
+> Task :camera_android:generateDebugResources
+> Task :camera_android:packageDebugResources
+> Task :flutter_mediapipe:compileDebugRenderscript NO-SOURCE
+> Task :flutter_mediapipe:generateDebugResValues
+> Task :flutter_mediapipe:generateDebugResources
+> Task :flutter_mediapipe:packageDebugResources
+> Task :flutter_plugin_android_lifecycle:compileDebugRenderscript NO-SOURCE
+> Task :flutter_plugin_android_lifecycle:generateDebugResValues
+> Task :flutter_plugin_android_lifecycle:generateDebugResources
+> Task :flutter_plugin_android_lifecycle:packageDebugResources
+> Task :just_audio:compileDebugRenderscript NO-SOURCE
+> Task :just_audio:generateDebugResValues
+> Task :just_audio:generateDebugResources
+> Task :just_audio:packageDebugResources
+> Task :path_provider_android:compileDebugRenderscript NO-SOURCE
+> Task :path_provider_android:generateDebugResValues
+> Task :path_provider_android:generateDebugResources
+> Task :path_provider_android:packageDebugResources
+> Task :speech_to_text:compileDebugRenderscript NO-SOURCE
+> Task :speech_to_text:generateDebugResValues
+> Task :speech_to_text:generateDebugResources
+> Task :speech_to_text:packageDebugResources
+> Task :tflite_flutter:compileDebugRenderscript NO-SOURCE
+> Task :tflite_flutter:generateDebugResValues
+> Task :tflite_flutter:generateDebugResources
+> Task :tflite_flutter:packageDebugResources
+> Task :url_launcher_android:compileDebugRenderscript NO-SOURCE
+> Task :url_launcher_android:generateDebugResValues
+> Task :url_launcher_android:generateDebugResources
+> Task :url_launcher_android:packageDebugResources
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :audio_session:extractDeepLinksDebug
+> Task :audioplayers_android:extractDeepLinksDebug
+> Task :camera_android:extractDeepLinksDebug
+> Task :app:mergeDebugResources
+> Task :flutter_mediapipe:extractDeepLinksDebug
+> Task :flutter_plugin_android_lifecycle:extractDeepLinksDebug
+> Task :just_audio:extractDeepLinksDebug
+> Task :path_provider_android:extractDeepLinksDebug
+> Task :speech_to_text:extractDeepLinksDebug
+
+> Task :just_audio:processDebugManifest
+package="com.ryanheise.just_audio" found in source AndroidManifest.xml: C:\Users\huawei\AppData\Local\Pub\Cache\hosted\pub.dev\just_audio-0.9.36\android\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :speech_to_text:processDebugManifest
+package="com.csdcorp.speech_to_text" found in source AndroidManifest.xml: C:\Users\huawei\AppData\Local\Pub\Cache\hosted\pub.dev\speech_to_text-6.6.1\android\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :camera_android:processDebugManifest
+package="io.flutter.plugins.camera" found in source AndroidManifest.xml: C:\Users\huawei\AppData\Local\Pub\Cache\hosted\pub.dev\camera_android-0.10.9+1\android\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :audioplayers_android:processDebugManifest
+package="xyz.luan.audioplayers" found in source AndroidManifest.xml: C:\Users\huawei\AppData\Local\Pub\Cache\hosted\pub.dev\audioplayers_android-5.0.0\android\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :flutter_plugin_android_lifecycle:processDebugManifest
+package="io.flutter.plugins.flutter_plugin_android_lifecycle" found in source AndroidManifest.xml: C:\Users\huawei\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_plugin_android_lifecycle-2.0.19\android\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :flutter_mediapipe:processDebugManifest
+package="co.sotai.flutter_mediapipe" found in source AndroidManifest.xml: C:\Users\huawei\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_mediapipe-0.0.7\android\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :audio_session:processDebugManifest
+package="com.ryanheise.audio_session" found in source AndroidManifest.xml: C:\Users\huawei\AppData\Local\Pub\Cache\hosted\pub.dev\audio_session-0.1.18\android\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :tflite_flutter:extractDeepLinksDebug
+
+> Task :path_provider_android:processDebugManifest
+package="io.flutter.plugins.pathprovider" found in source AndroidManifest.xml: C:\Users\huawei\AppData\Local\Pub\Cache\hosted\pub.dev\path_provider_android-2.2.2\android\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :url_launcher_android:extractDeepLinksDebug
+
+> Task :tflite_flutter:processDebugManifest
+package="com.tfliteflutter.tflite_flutter_plugin" found in source AndroidManifest.xml: C:\Users\huawei\AppData\Local\Pub\Cache\hosted\pub.dev\tflite_flutter-0.9.5\android\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :url_launcher_android:processDebugManifest
+package="io.flutter.plugins.urllauncher" found in source AndroidManifest.xml: C:\Users\huawei\AppData\Local\Pub\Cache\hosted\pub.dev\url_launcher_android-6.3.0\android\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :audio_session:compileDebugLibraryResources
+
+> Task :app:processDebugMainManifest
+package="com.example.beyan_a" found in source AndroidManifest.xml: C:\Users\huawei\Downloads\beyan_a (2)\beyan_a\android\app\src\main\AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+[org.tensorflow:tensorflow-lite:2.8.0] C:\Users\huawei\.gradle\caches\transforms-3\900b67ecb6f4dcd19446297bfcca3fb6\transformed\jetified-tensorflow-lite-2.8.0\AndroidManifest.xml Warning:
+	Namespace 'org.tensorflow.lite' used in: org.tensorflow:tensorflow-lite:2.8.0, org.tensorflow:tensorflow-lite-gpu:2.8.0, org.tensorflow:tensorflow-lite-api:2.8.0.
+C:\Users\huawei\Downloads\beyan_a (2)\beyan_a\android\app\src\main\AndroidManifest.xml:8:5-67 Warning:
+	Element uses-permission#android.permission.INTERNET at AndroidManifest.xml:8:5-67 duplicated with element declared at AndroidManifest.xml:4:5-66
+
+> Task :app:processDebugManifest
+> Task :audioplayers_android:compileDebugLibraryResources
+> Task :app:processDebugManifestForPackage
+> Task :camera_android:compileDebugLibraryResources
+> Task :flutter_mediapipe:compileDebugLibraryResources
+> Task :flutter_plugin_android_lifecycle:parseDebugLocalResources
+> Task :camera_android:parseDebugLocalResources
+> Task :audio_session:parseDebugLocalResources
+> Task :audioplayers_android:parseDebugLocalResources
+> Task :flutter_plugin_android_lifecycle:compileDebugLibraryResources
+> Task :flutter_mediapipe:parseDebugLocalResources
+> Task :audio_session:generateDebugRFile
+> Task :audioplayers_android:generateDebugRFile
+> Task :flutter_plugin_android_lifecycle:generateDebugRFile
+> Task :flutter_mediapipe:generateDebugRFile
+> Task :just_audio:compileDebugLibraryResources
+> Task :camera_android:generateDebugRFile
+> Task :just_audio:parseDebugLocalResources
+> Task :path_provider_android:compileDebugLibraryResources
+> Task :path_provider_android:parseDebugLocalResources
+> Task :speech_to_text:compileDebugLibraryResources
+> Task :just_audio:generateDebugRFile
+> Task :speech_to_text:parseDebugLocalResources
+> Task :tflite_flutter:compileDebugLibraryResources
+> Task :path_provider_android:generateDebugRFile
+> Task :tflite_flutter:parseDebugLocalResources
+> Task :speech_to_text:generateDebugRFile
+> Task :url_launcher_android:compileDebugLibraryResources
+> Task :url_launcher_android:parseDebugLocalResources
+> Task :tflite_flutter:generateDebugRFile
+> Task :audio_session:generateDebugBuildConfig
+> Task :audio_session:javaPreCompileDebug
+> Task :url_launcher_android:generateDebugRFile
+> Task :audioplayers_android:generateDebugBuildConfig
+> Task :app:processDebugResources
+
+> Task :audio_session:compileDebugJavaWithJavac FAILED
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+See https://docs.gradle.org/8.1.1/userguide/command_line_interface.html#sec:command_line_warnings
+133 actionable tasks: 121 executed, 12 up-to-date
